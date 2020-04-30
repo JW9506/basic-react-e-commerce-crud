@@ -1,0 +1,22 @@
+.Card {
+  border: 0.1rem solid black;
+  flex-basis: calc(20% - 2rem);
+  display: flex;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+  flex-direction: column;
+  .picture {
+    width: 100%;
+  }
+  .more {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    .name {
+      font-weight: bold;
+    }
+    .price {
+      color: #a1887f;
+    }
+  }
+}
