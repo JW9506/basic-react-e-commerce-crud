@@ -6,6 +6,7 @@ import App from "App"
 
 import { store } from "reduxStore"
 
+import WithAuth from "components/WithAuth/WithAuth"
 import Header from "components/Header/Header"
 import HomePage from "pages/HomePage/HomePage"
 import CartPage from "pages/CartPage/CartPage"
@@ -21,7 +22,7 @@ const Root = () => (
       <App>
         <Switch>
           <Route exact path="/" component={HomePage} />
-          <Route exact path="/cart" component={CartPage} />
+          <Route exact path="/cart" component={WithAuth(CartPage)} />
           <Route exact path="/login" component={LoginPage} />
           <Route exact path="/products" component={ProductPage} />
         </Switch>
