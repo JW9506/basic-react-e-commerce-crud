@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useRef } from "react"
 import { connect } from "react-redux"
 import { addProduct } from "reduxStore/product"
 import { bindActionCreators } from "@reduxjs/toolkit"
@@ -8,11 +8,18 @@ import useInput from "hooks/useInput"
 import "./ManageProduct.scss"
 
 const ManageProduct = ({ products, addProduct }) => {
-  const { state, changeHandler } = useInput("name", "price", "continent")
+  const productNameInputRef = useRef(null)
+  const { state, changeHandler, clearState } = useInput(
+    "name",
+    "price",
+    "continent"
+  )
   const { name, price, continent } = state
   const formSubmitHandler = (e) => {
     e.preventDefault()
     addProduct({ id: uuid(), name, price, continent, images: [] })
+    clearState()
+    productNameInputRef.current.focus()
   }
   return (
     <div className="ManageProduct">
@@ -20,6 +27,7 @@ const ManageProduct = ({ products, addProduct }) => {
         <div className="form-control">
           <label htmlFor="name">Product Name</label>
           <input
+            ref={productNameInputRef}
             type="text"
             id="name"
             name="name"
