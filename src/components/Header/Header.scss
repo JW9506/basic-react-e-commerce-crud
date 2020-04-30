@@ -5,8 +5,8 @@
   background-color: #0064d3;
   justify-content: space-between;
   align-items: center;
-  & a,
-  & span {
+  a,
+  .loggedin-user > span {
     text-decoration: none;
     color: #e6ee9c;
   }
@@ -15,11 +15,14 @@
   }
   .right {
     display: flex;
-    & > * {
+    > * {
       margin-right: 2rem;
     }
     .loggedin-user {
-      cursor: pointer;
+      position: relative;
+      span {
+        cursor: pointer;
+      }
     }
   }
 }

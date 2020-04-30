@@ -1,9 +1,12 @@
 import React from "react"
 import { Link } from "react-router-dom"
 import { connect } from "react-redux"
+import { bindActionCreators } from "@reduxjs/toolkit"
+import { toggleUserProfile } from "reduxStore/globalState"
+import UserProfileDropdown from "components/UserProfileDropdown/UserProfileDropdown"
 import "./Header.scss"
 
-const Header = ({ currentUser }) => {
+const Header = ({ currentUser, isUserProfileOpened, toggleUserProfile }) => {
   return (
     <div className="Header">
       <div className="left">
@@ -19,7 +22,12 @@ const Header = ({ currentUser }) => {
           Cart
         </Link>
         {currentUser ? (
-          <span className="loggedin-user">Welcome, {currentUser}</span>
+          <div className="loggedin-user">
+            <span onClick={() => toggleUserProfile()}>
+              Welcome, {currentUser}
+            </span>
+            {isUserProfileOpened && <UserProfileDropdown />}
+          </div>
         ) : (
           <Link to="/login" className="login">
             Login
@@ -32,6 +40,11 @@ const Header = ({ currentUser }) => {
 
 const mapStateToProps = (state) => ({
   currentUser: state.user.currentUser,
+  isUserProfileOpened: state.global.isUserProfileOpened,
 })
 
-export default connect(mapStateToProps)(Header)
+const mapDispatchToProps = (dispatch) => ({
+  toggleUserProfile: bindActionCreators(toggleUserProfile, dispatch),
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(Header)

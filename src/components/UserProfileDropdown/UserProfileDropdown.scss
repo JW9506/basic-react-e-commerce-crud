@@ -1,0 +1,15 @@
+.UserProfileDropdown {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border: 1px solid black;
+  top: 4rem;
+  left: -4rem;
+  span {
+    border-bottom: 1px solid #ff8a65;
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}
