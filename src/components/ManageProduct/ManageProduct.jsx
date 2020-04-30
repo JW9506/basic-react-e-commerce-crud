@@ -2,6 +2,7 @@ import React from "react"
 import { connect } from "react-redux"
 import { addProduct } from "reduxStore/product"
 import { bindActionCreators } from "@reduxjs/toolkit"
+import { v4 as uuid } from "uuid"
 
 import useInput from "hooks/useInput"
 import "./ManageProduct.scss"
@@ -11,7 +12,7 @@ const ManageProduct = ({ products, addProduct }) => {
   const { name, price, continent } = state
   const formSubmitHandler = (e) => {
     e.preventDefault()
-    addProduct({ name, price, continent, images: [] })
+    addProduct({ id: uuid(), name, price, continent, images: [] })
   }
   return (
     <div className="ManageProduct">

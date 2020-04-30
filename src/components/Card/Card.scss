@@ -1,6 +1,7 @@
 .Card {
   border: 0.1rem solid black;
   flex-basis: calc(20% - 2rem);
+  cursor: pointer;
   display: flex;
   margin-right: 2rem;
   margin-bottom: 2rem;
