@@ -1,0 +1,21 @@
+.Header {
+  font-size: 1.8rem;
+  height: 4rem;
+  display: flex;
+  background-color: #0064d3;
+  justify-content: space-between;
+  align-items: center;
+  & a {
+    text-decoration: none;
+    color: #e6ee9c;
+  }
+  .left {
+    margin-left: 2rem;
+  }
+  .right {
+    display: flex;
+    & > * {
+      margin-right: 2rem;
+    }
+  }
+}
