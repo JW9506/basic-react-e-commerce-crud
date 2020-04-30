@@ -11,6 +11,9 @@ const Header = () => {
         </Link>
       </div>
       <div className="right">
+        <Link to="/products" className="products">
+          Products
+        </Link>
         <Link to="/cart" className="cart">
           Cart
         </Link>
