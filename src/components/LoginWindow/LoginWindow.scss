@@ -1,0 +1,10 @@
+.LoginWindow {
+  .form {
+    display: flex;
+    flex-direction: column;
+    .form-control {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}

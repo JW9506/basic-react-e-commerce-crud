@@ -1,8 +1,9 @@
 import React from "react"
 import { Link } from "react-router-dom"
+import { connect } from "react-redux"
 import "./Header.scss"
 
-const Header = () => {
+const Header = ({ currentUser }) => {
   return (
     <div className="Header">
       <div className="left">
@@ -17,12 +18,20 @@ const Header = () => {
         <Link to="/cart" className="cart">
           Cart
         </Link>
-        <Link to="/login" className="login">
-          Login
-        </Link>
+        {currentUser ? (
+          <span>Welcome, {currentUser}</span>
+        ) : (
+          <Link to="/login" className="login">
+            Login
+          </Link>
+        )}
       </div>
     </div>
   )
 }
 
-export default Header
+const mapStateToProps = (state) => ({
+  currentUser: state.user.currentUser,
+})
+
+export default connect(mapStateToProps)(Header)

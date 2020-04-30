@@ -5,7 +5,8 @@
   background-color: #0064d3;
   justify-content: space-between;
   align-items: center;
-  & a {
+  & a,
+  & span {
     text-decoration: none;
     color: #e6ee9c;
   }
