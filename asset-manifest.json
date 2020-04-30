@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/basic-react-e-commerce-crud/static/css/main.c63718d6.chunk.css",
+    "main.js": "/basic-react-e-commerce-crud/static/js/main.a0f676e5.chunk.js",
+    "main.js.map": "/basic-react-e-commerce-crud/static/js/main.a0f676e5.chunk.js.map",
+    "runtime-main.js": "/basic-react-e-commerce-crud/static/js/runtime-main.52114e41.js",
+    "runtime-main.js.map": "/basic-react-e-commerce-crud/static/js/runtime-main.52114e41.js.map",
+    "static/js/2.1fd83532.chunk.js": "/basic-react-e-commerce-crud/static/js/2.1fd83532.chunk.js",
+    "static/js/2.1fd83532.chunk.js.map": "/basic-react-e-commerce-crud/static/js/2.1fd83532.chunk.js.map",
+    "index.html": "/basic-react-e-commerce-crud/index.html",
+    "precache-manifest.75794c7e7ea63f6ddfa22f7e69ce6770.js": "/basic-react-e-commerce-crud/precache-manifest.75794c7e7ea63f6ddfa22f7e69ce6770.js",
+    "service-worker.js": "/basic-react-e-commerce-crud/service-worker.js",
+    "static/css/main.c63718d6.chunk.css.map": "/basic-react-e-commerce-crud/static/css/main.c63718d6.chunk.css.map",
+    "static/js/2.1fd83532.chunk.js.LICENSE.txt": "/basic-react-e-commerce-crud/static/js/2.1fd83532.chunk.js.LICENSE.txt",
+    "static/media/static_pic.jpg": "/basic-react-e-commerce-crud/static/media/static_pic.37a228bc.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.52114e41.js",
+    "static/js/2.1fd83532.chunk.js",
+    "static/css/main.c63718d6.chunk.css",
+    "static/js/main.a0f676e5.chunk.js"
+  ]
+}
