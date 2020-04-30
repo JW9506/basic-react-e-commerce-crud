@@ -1,8 +1,7 @@
 import React from "react"
-import Axios from "axios"
 
-const App = () => {
-  return <div className="App">Hello</div>
+const App = ({ children }) => {
+  return <div className="App">{children}</div>
 }
 
 export default App
