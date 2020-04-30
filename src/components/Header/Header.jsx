@@ -19,7 +19,7 @@ const Header = ({ currentUser }) => {
           Cart
         </Link>
         {currentUser ? (
-          <span>Welcome, {currentUser}</span>
+          <span className="loggedin-user">Welcome, {currentUser}</span>
         ) : (
           <Link to="/login" className="login">
             Login
