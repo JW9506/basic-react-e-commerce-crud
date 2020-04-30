@@ -1,5 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit"
 
+/*
+  type User = {
+    currentUser: string
+  }
+*/
+
 const user = createSlice({
   name: "user",
   initialState: {
