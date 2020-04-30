@@ -12,5 +12,7 @@ export default (...fields) => {
     setState((prev) => ({ ...prev, [name]: value }))
   }
 
-  return { state, changeHandler }
+  const clearState = () => setState(initialState)
+
+  return { state, changeHandler, clearState }
 }
